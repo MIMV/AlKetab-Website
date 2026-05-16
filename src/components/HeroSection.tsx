@@ -42,7 +42,7 @@ export const HeroSection: React.FC = () => {
                 className="w-20 h-20 rounded-2xl shadow-2xl relative z-10"
               />
             </motion.div>
-            <h2 className="text-2xl font-bold text-emerald-400">تطبيق الكتاب</h2>
+            <span className="text-2xl font-bold text-emerald-400">تطبيق الكتاب</span>
           </div>
 
           <motion.h1
