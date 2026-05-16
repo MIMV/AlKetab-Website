@@ -102,7 +102,7 @@ export const HeroSection: React.FC = () => {
               }}
             >
               <img
-                src="https://public.youware.com/image/6d48d1f6-9e1a-4d8b-b0df-ceef6263dfbc/d7c4janqj7.jpeg"
+                src="/assets/ScreenShot-00001.jpeg"
                 alt="App Screenshot"
                 className="w-full h-full object-cover"
               />

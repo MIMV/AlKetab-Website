@@ -1,72 +1,54 @@
-# AI React Website Template
+# Al-Kitab — تطبيق الكتاب
 
-A flexible, feature-rich React template designed for AI-generated websites with modern development tools and libraries.
+The marketing website for **Al-Kitab (الكتاب)**, an iOS Quran app that delivers a modern, distraction-free reading experience with deep study tools.
 
-## ✨ Key Features
+**Live site**: [quran.alketab.app](https://quran.alketab.app)
+**App Store**: [Al-Kitab on the App Store](https://apps.apple.com/us/app/id543646326)
 
-- 🚀 **React 18 + TypeScript** - Modern development experience
-- 🎨 **Tailwind CSS** - Utility-first CSS framework
-- ⚡ **Vite** - Fast build tool
-- 🌐 **i18next** - Complete internationalization solution
-- 🎯 **Zustand** - Lightweight state management
-- ✨ **Framer Motion** - Smooth animation effects
-- 🎭 **Headless UI** - Accessible UI components
-- 📦 **Lucide React** - Beautiful icon library
-- 🛣️ **React Router** - Single-page application routing
+> تعرّف إلى الكتاب، تجربة قرآنية متقدمة تجمع بين سهولة الاستخدام وعمق المحتوى، في تصميم عصري خالٍ من المشتتات.
 
-## 🛠️ Tech Stack
+## About the app
 
-### Core Technologies
-- React 18.3.1 + TypeScript 5.8.3
-- Vite 7.0.0 (Build tool)
-- Tailwind CSS 3.4.17 (CSS framework)
+Al-Kitab brings together everything a reader needs for a deeper, easier, and more personal engagement with the Quran — in a single, carefully designed app.
 
-### Feature Libraries
-- React Router DOM 6.30.1 (Routing)
-- Zustand 4.4.7 (State management)
-- i18next + react-i18next (Internationalization)
-- Framer Motion 11.0.8 (Animations)
-- Headless UI 1.7.18 (UI components)
-- Lucide React (Icon library)
+### Features
 
-## 🚀 Quick Start
+- **Complete reading experience** — three Mushaf views: Madinah Mushaf, book simulation, and large-print Mushaf.
+- **Advanced study tools** — tafsir, word-by-word i'rāb (grammatical analysis), variant qira'āt, and word-level pronunciation playback.
+- **AI-powered recitation tracking** — follow along with audio, hands-free mode, auto-scroll, and memorization review.
+- **Rich audio** — recitations from a curated selection of reciters with offline download support.
+- **Personalized experience** — favorite surahs, full sync across devices, automatic dark mode.
+- **Smart search** — fast, comprehensive search powered by the Fānūs (الفانوس) search engine, plus voice search.
+- **Ad-free, 100%.**
 
-1. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+## About this repository
 
-2. **Start development server**:
-   ```bash
-   npm run dev
-   ```
-   Visit http://localhost:5173 to view the application
+This repo contains the source for the marketing website only — the Al-Kitab iOS app itself is closed-source.
 
-3. **Build for production**:
-   ```bash
-   npm run build
-   ```
+### Tech stack
 
-4. **Preview build**:
-   ```bash
-   npm run preview
-   ```
+- React 18 + TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion + GSAP
+- i18next (RTL/Arabic-first)
+- Deployed to GitHub Pages at [quran.alketab.app](https://quran.alketab.app)
 
-## 📁 Project Structure
+### Local development
 
-```
-src/
-├── api/             # API related code
-├── assets/          # Static assets
-├── components/      # Reusable components
-├── layouts/         # Layout components  
-├── pages/           # Page components
-├── styles/          # Style files
-├── types/           # TypeScript type definitions
-├── App.tsx          # Main application component
-└── main.tsx         # Application entry point
+```bash
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # production build to ./dist
+npm run preview  # preview the production build
 ```
 
-## More Information
+### Deployment
 
-For more detailed project structure, tech stack, configuration instructions and development guide, please refer to the [YOUWARE.md](./YOUWARE.md) file.
+Pushes to `main` trigger [.github/workflows/deploy.yml](.github/workflows/deploy.yml), which builds the site and publishes `dist/` to GitHub Pages. The custom domain is wired via [public/CNAME](public/CNAME).
+
+## Contact
+
+- Email: info@iPhoneIslam.com
+- Twitter / X: [@iphoneislam](https://twitter.com/iphoneislam)
+- Instagram: [@iphoneislam](https://instagram.com/iphoneislam)
