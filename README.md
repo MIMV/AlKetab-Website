@@ -1,25 +1,26 @@
 # Al-Kitab — تطبيق الكتاب
 
-The marketing website for **Al-Kitab (الكتاب)**, an iOS Quran app that delivers a modern, distraction-free reading experience with deep study tools.
+The marketing website for **Al-Kitab (الكتاب)**, an iOS Quran app with private, offline, on-device recitation correction.
+
+The site is available in Arabic and English, with a persistent language switch and full RTL/LTR support.
 
 **Live site**: [quran.alketab.app](https://quran.alketab.app)
 **App Store**: [Al-Kitab on the App Store](https://apps.apple.com/us/app/id543646326)
 
-> تعرّف إلى الكتاب، تجربة قرآنية متقدمة تجمع بين سهولة الاستخدام وعمق المحتوى، في تصميم عصري خالٍ من المشتتات.
+> رتّل، والكتاب يصحّح لك — مجانًا، بلا إنترنت، وبخصوصية تامة.
 
 ## About the app
 
-Al-Kitab brings together everything a reader needs for a deeper, easier, and more personal engagement with the Quran — in a single, carefully designed app.
+Al-Kitab listens as you recite, follows word by word, and helps you improve. The correction engine runs entirely on iPhone: no account, no upload, and no internet connection required.
 
 ### Features
 
-- **Complete reading experience** — three Mushaf views: Madinah Mushaf, book simulation, and large-print Mushaf.
-- **Advanced study tools** — tafsir, word-by-word i'rāb (grammatical analysis), variant qira'āt, and word-level pronunciation playback.
-- **AI-powered recitation tracking** — follow along with audio, hands-free mode, auto-scroll, and memorization review.
-- **Rich audio** — recitations from a curated selection of reciters with offline download support.
-- **Personalized experience** — favorite surahs, full sync across devices, automatic dark mode.
-- **Smart search** — fast, comprehensive search powered by the Fānūs (الفانوس) search engine, plus voice search.
-- **Ad-free, 100%.**
+- **On-device recitation correction** — word-level confirmation and review marks, with Off, Easy, Normal, and Strict levels.
+- **Quran Teacher** — stops at a mistake, plays the correct word, and waits until the recitation is corrected.
+- **Start anywhere** — detects the verse from recitation and follows continuously across surahs.
+- **Memorization and review** — reveal-as-you-recite, whispered word hints, and listen-and-repeat practice.
+- **Private and offline** — voice never leaves the device; no account or connection required.
+- **Faster everyday tools** — improved search, tafsir, highlighting, sharing, and unified Surah/Juz browsing.
 
 ## About this repository
 
@@ -30,8 +31,8 @@ This repo contains the source for the marketing website only — the Al-Kitab iO
 - React 18 + TypeScript
 - Vite
 - Tailwind CSS
-- Framer Motion + GSAP
-- i18next (RTL/Arabic-first)
+- Framer Motion
+- Arabic-first, RTL responsive design
 - Deployed to GitHub Pages at [quran.alketab.app](https://quran.alketab.app)
 
 ### Local development

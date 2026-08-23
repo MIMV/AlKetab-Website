@@ -1,14 +1,14 @@
 {
   "name": "تطبيق الكتاب",
   "short_name": "الكتاب",
-  "description": "تطبيق الكتاب: تجربة قرآنية متقدمة تجمع بين سهولة الاستخدام وعمق المحتوى.",
+  "description": "تصحيح تلاوة القرآن بالذكاء الاصطناعي على جهازك، مجانًا ودون إنترنت، مع الحفظ والتفسير والبحث الصوتي.",
   "lang": "ar",
   "dir": "rtl",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#09090b",
-  "theme_color": "#10b981",
+  "background_color": "#080706",
+  "theme_color": "#0E0C0A",
   "icons": [
     {
       "src": "/assets/AppIcon.png",

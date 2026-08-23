@@ -1,99 +1,64 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Download, Languages, Menu, X } from "lucide-react";
+import { useLanguage } from "../LanguageContext";
+
+const APP_STORE_URL = "https://apps.apple.com/us/app/id543646326";
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const { isArabic, setLanguage } = useLanguage();
+  const nextLanguage = isArabic ? "en" : "ar";
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const navLinks = [
-    { name: 'الرئيسية', href: '#' },
-    { name: 'المميزات', href: '#features' },
-    { name: 'لقطات الشاشة', href: '#screenshots' },
-    { name: 'المراجعات', href: '#testimonials' },
+  const navLinks = isArabic ? [
+    { name: "كل المزايا", href: "#complete-app" },
+    { name: "تصحيح التلاوة", href: "#correction" },
+    { name: "المعلّم", href: "#teacher" },
+    { name: "الحفظ والمراجعة", href: "#memorization" },
+    { name: "الخصوصية", href: "#privacy" },
+  ] : [
+    { name: "All features", href: "#complete-app" },
+    { name: "Correction", href: "#correction" },
+    { name: "Quran Teacher", href: "#teacher" },
+    { name: "Memorization", href: "#memorization" },
+    { name: "Privacy", href: "#privacy" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 24);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
-      }`}
-    >
-      <div className="container mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
-        <div className="flex items-center gap-3">
-          <img src="/assets/AppIcon.png" alt="Logo" className="w-10 h-10 rounded-lg" />
-          <span className={`text-2xl font-bold ${isScrolled ? 'text-zinc-900' : 'text-white'}`}>
-            الكتاب
-          </span>
-        </div>
-
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className={`text-lg font-medium transition-colors ${
-                isScrolled ? 'text-zinc-600 hover:text-emerald-600' : 'text-zinc-200 hover:text-white'
-              }`}
-            >
-              {link.name}
-            </a>
-          ))}
-          <a
-            href="#"
-            className="px-6 py-2 bg-emerald-600 text-white rounded-full hover:bg-emerald-700 transition-colors"
-          >
-            تحميل التطبيق
-          </a>
+    <header className={`site-header ${isScrolled ? "is-scrolled" : ""}`}>
+      <div className="site-header-inner">
+        <a className="site-logo" href="#top" aria-label={isArabic ? "الكتاب — الصفحة الرئيسية" : "Al-Kitab — Home"}>
+          <img src="/assets/AppIcon.png" alt="" />
+          <span>{isArabic ? "الكتاب" : "Al-Kitab"}</span>
+        </a>
+        <nav className="desktop-nav" aria-label={isArabic ? "التنقل الرئيسي" : "Main navigation"}>
+          {navLinks.map((link) => <a href={link.href} key={link.name}>{link.name}</a>)}
         </nav>
-
-        {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden text-zinc-900"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X className={isScrolled ? 'text-zinc-900' : 'text-white'} /> : <Menu className={isScrolled ? 'text-zinc-900' : 'text-white'} />}
+        <a className="language-toggle" href={`/${nextLanguage}/`} onClick={(event) => { event.preventDefault(); setLanguage(nextLanguage); }} aria-label={isArabic ? "Switch to English" : "التبديل إلى العربية"}>
+          <Languages size={15} /><span>{isArabic ? "English" : "العربية"}</span>
+        </a>
+        <a className="header-download" href={APP_STORE_URL} target="_blank" rel="noreferrer">
+          <Download size={15} /> {isArabic ? "تحميل مجاني" : "Free download"}
+        </a>
+        <button className="menu-toggle" type="button" aria-label={isArabic ? (isOpen ? "إغلاق القائمة" : "فتح القائمة") : (isOpen ? "Close menu" : "Open menu")} aria-expanded={isOpen} onClick={() => setIsOpen((value) => !value)}>
+          {isOpen ? <X /> : <Menu />}
         </button>
       </div>
-
-      {/* Mobile Menu */}
       <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-zinc-100 overflow-hidden"
-          >
-            <div className="flex flex-col p-6 gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-zinc-600 text-lg font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.name}
-                </a>
-              ))}
-              <a
-                href="#"
-                className="px-6 py-3 bg-emerald-600 text-white rounded-xl text-center font-bold"
-              >
-                تحميل التطبيق
-              </a>
-            </div>
-          </motion.div>
+        {isOpen && (
+          <motion.nav className="mobile-nav" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }}>
+            {navLinks.map((link) => <a href={link.href} key={link.name} onClick={() => setIsOpen(false)}>{link.name}</a>)}
+            <a className="mobile-language-toggle" href={`/${nextLanguage}/`} onClick={(event) => { event.preventDefault(); setIsOpen(false); setLanguage(nextLanguage); }}><Languages size={15} /> {isArabic ? "English" : "العربية"}</a>
+            <a href={APP_STORE_URL} target="_blank" rel="noreferrer">{isArabic ? "تحميل التطبيق من App Store" : "Download on the App Store"}</a>
+          </motion.nav>
         )}
       </AnimatePresence>
     </header>
