@@ -18,14 +18,14 @@ export const FAQSection: React.FC = () => {
     { question: "هل الكتاب مخصص لتصحيح التلاوة فقط؟", answer: "لا. الكتاب تطبيق قرآن متكامل يضم ثلاثة خيارات للمصحف، والتفسير ودراسة الكلمات، وقراء يعملون دون إنترنت، والبحث المتقدم، والإشارات المرجعية والمزامنة بين أجهزتك." },
     { question: "هل يمكنني البدء من أي آية؟", answer: "نعم. ابدأ التلاوة من أي مكان، وسيعرف التطبيق موضعك ويتابع معك. ويمكنك أيضًا فتح صفحة آية بمجرد تلاوتها." },
   ] : [
-    { question: "Does Al-Kitab use AI to correct Quran recitation?", answer: "Yes. Its on-device correction engine follows Quran recitation word by word, detects wrong or skipped words, and can check vowel marks, shadda, and madd lengths according to your chosen level." },
+    { question: "Does Al-Ketab use AI to correct Quran recitation?", answer: "Yes. Its on-device correction engine follows Quran recitation word by word, detects wrong or skipped words, and can check vowel marks, shadda, and madd lengths according to your chosen level." },
     { question: "Is recitation correction free?", answer: "Yes. The new recitation correction engine is free and requires no account or subscription." },
     { question: "Does the app send my voice to the internet?", answer: "No. Listening, analysis, and correction all happen on your iPhone. Your voice is never uploaded or stored on a server." },
     { question: "Does correction work without an internet connection?", answer: "Yes. Because it runs on your device, it works in the masjid, on a plane, or anywhere without a signal." },
     { question: "What is the difference between correction levels?", answer: "Choose Off, Easy for fewer interruptions, Normal for vowel marks and skipped words, or Strict to add shadda and madd lengths." },
     { question: "What is Quran Teacher mode?", answer: "It is a training mode that lets nothing pass: it stops, plays the correct word, and waits until you say it properly before moving on." },
-    { question: "How does Al-Kitab help with Quran memorization and review?", answer: "Review mode hides verses and reveals words as you recite, whispers a word when you get stuck, and Listen and Repeat plays each verse in your chosen reciter's voice before listening to you." },
-    { question: "Is Al-Kitab only a Quran recitation correction app?", answer: "No. Al-Kitab is a complete Quran app with three Mushaf views, tafsir and word study, offline reciters, advanced search, bookmarks, and synchronization across your devices." },
+    { question: "How does Al-Ketab help with Quran memorization and review?", answer: "Review mode hides verses and reveals words as you recite, whispers a word when you get stuck, and Listen and Repeat plays each verse in your chosen reciter's voice before listening to you." },
+    { question: "Is Al-Ketab only a Quran recitation correction app?", answer: "No. Al-Ketab is a complete Quran app with three Mushaf views, tafsir and word study, offline reciters, advanced search, bookmarks, and synchronization across your devices." },
     { question: "Can I begin from any verse?", answer: "Yes. Start reciting anywhere and the app will find your place and follow along. You can also open a verse simply by reciting it." },
   ];
 

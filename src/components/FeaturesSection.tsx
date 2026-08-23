@@ -123,7 +123,7 @@ export const FeaturesSection: React.FC = () => {
           <strong>{isArabic ? "انتبه أين يُعالَج صوتك" : "Know where your voice is processed"}</strong>
           <p>{isArabic
             ? <>التطبيقات التي ترسل تلاوتك إلى السحابة لمعالجة الصوت يمكن أن <b>تستهلك باقة الإنترنت لديك بسرعة.</b> وليس هذا فقط؛ فقد تلتقط وترفع أكثر من صوتك وحده، بما في ذلك <b>أصوات المحيطين أو محادثات خاصة في الخلفية.</b> لذلك يعالج الكتاب تلاوتك بالكامل على جهازك، ولا يرفع صوتك إلى أي خادم.</>
-            : <>Apps that send recitation audio to the cloud can <b>quickly consume your mobile data.</b> That is not the only risk: they may capture and upload more than your voice, including <b>people nearby or private conversations in the background.</b> Al-Kitab processes your recitation entirely on your device, so your audio is never uploaded to a server.</>}</p>
+            : <>Apps that send recitation audio to the cloud can <b>quickly consume your mobile data.</b> That is not the only risk: they may capture and upload more than your voice, including <b>people nearby or private conversations in the background.</b> Al-Ketab processes your recitation entirely on your device, so your audio is never uploaded to a server.</>}</p>
         </div>
       </aside>
 
@@ -141,7 +141,7 @@ export const FeaturesSection: React.FC = () => {
           <h2>{isArabic ? <>تجربة قرآنية<br /><em>متكاملة.</em></> : <>A complete Quran<br /><em>experience.</em></>}</h2>
           <p>{isArabic
             ? "يضيف تصحيح التلاوة والمعلّم قدرات جديدة إلى تطبيق متكامل للقراءة والفهم والاستماع والبحث — وكل هذه الأدوات الأساسية ما زالت في قلب الكتاب."
-            : "Recitation Correction and Quran Teacher add powerful new capabilities to a complete app for reading, understanding, listening, and searching — with every essential tool still at the heart of Al-Kitab."}</p>
+            : "Recitation Correction and Quran Teacher add powerful new capabilities to a complete app for reading, understanding, listening, and searching — with every essential tool still at the heart of Al-Ketab."}</p>
         </div>
         <div className="complete-app-grid">
           {completeAppFeatures.map(({ icon: Icon, title, text }) => (
@@ -161,7 +161,7 @@ export const FeaturesSection: React.FC = () => {
           <h2>{isArabic ? <>عينٌ هادئة على<br /><em>كل كلمة.</em></> : <>A quiet eye on<br /><em>every word.</em></>}</h2>
           <p>{isArabic
             ? "يتابعك محرّك الكتاب لحظة بلحظة. تظهر علامة تحت كل كلمة لتعرف ما تمّ تأكيده وما يستحق أن تعود إليه، ثم يجمع سجل الجلسة كل ما يحتاج مراجعة."
-            : "Al-Kitab follows you moment by moment. A mark appears under every word so you can see what was confirmed and what deserves another look, while the session log gathers everything worth revisiting."}</p>
+            : "Al-Ketab follows you moment by moment. A mark appears under every word so you can see what was confirmed and what deserves another look, while the session log gathers everything worth revisiting."}</p>
         </div>
         <div className="correction-showcase">
           <div className="correction-verse-card">
@@ -219,10 +219,10 @@ export const FeaturesSection: React.FC = () => {
       <section className="feature-section find-section">
         <div className="section-heading find-heading">
           <p className="section-kicker"><span>03</span> {isArabic ? "ابدأ من أي مكان" : "Start anywhere"}</p>
-          <h2>{isArabic ? <>رتّل، والكتاب<br /><em>يعثر عليك.</em></> : <>Recite, and Al-Kitab<br /><em>finds you.</em></>}</h2>
+          <h2>{isArabic ? <>رتّل، والكتاب<br /><em>يعثر عليك.</em></> : <>Recite, and Al-Ketab<br /><em>finds you.</em></>}</h2>
           <p>{isArabic
             ? "ابدأ من أي آية في القرآن. يعرف الكتاب موضعك، يفتح الصفحة، ويواصل معك حتى من سورة إلى التي تليها دون لمسة واحدة."
-            : "Begin from any verse in the Quran. Al-Kitab works out where you are, opens the page, and follows you from one Surah into the next without a tap."}</p>
+            : "Begin from any verse in the Quran. Al-Ketab works out where you are, opens the page, and follows you from one Surah into the next without a tap."}</p>
         </div>
         <div className="find-grid">
           <motion.article whileHover={{ y: -5 }} className="find-card find-anywhere">
@@ -260,7 +260,7 @@ export const FeaturesSection: React.FC = () => {
           <h2>{isArabic ? <>حين تتعثر،<br /><em>يهمس لك.</em></> : <>When you’re stuck,<br /><em>it whispers.</em></>}</h2>
           <p>{isArabic
             ? "إذا توقّفت عند كلمة، ينطقها لك الكتاب همسًا ثم يعيد الميكروفون مباشرة — من غير أن تكسر تلاوتك لتبحث عنها."
-            : "If you get stuck on a word, Al-Kitab whispers it to you and hands the microphone straight back — without breaking your recitation."}</p>
+            : "If you get stuck on a word, Al-Ketab whispers it to you and hands the microphone straight back — without breaking your recitation."}</p>
           <div className="memorization-points">
             <div><Ear /><span><strong>{isArabic ? "تلميح لطيف" : "A gentle hint"}</strong><small>{isArabic ? "تسمع الكلمة ثم تكمل فورًا" : "Hear the word, then continue immediately"}</small></span></div>
             <div><ListMusic /><span><strong>{isArabic ? "استمع ثم ردّد" : "Listen and repeat"}</strong><small>{isArabic ? "الآية بصوت قارئك، ثم دورك" : "Hear your reciter, then take your turn"}</small></span></div>

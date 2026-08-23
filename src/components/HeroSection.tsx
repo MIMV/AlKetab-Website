@@ -27,7 +27,7 @@ export const HeroSection: React.FC = () => {
         >
           <span className="hero-badge"><i /> {isArabic ? "تصحيح تلاوة القرآن بالذكاء الاصطناعي · على جهازك" : "AI Quran recitation correction · on-device"}</span>
           <motion.h1 initial={{ opacity: 0, y: 24 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7, delay: 0.15 }}>
-            {isArabic ? <>رتّل، والكتاب<br /><em>يصحّح لك.</em></> : <>Recite.<br /><em>Al-Kitab corrects you.</em></>}
+            {isArabic ? <>رتّل، والكتاب<br /><em>يصحّح لك.</em></> : <>Recite.<br /><em>Al-Ketab corrects you.</em></>}
           </motion.h1>
           <motion.p className="hero-description" initial={{ opacity: 0, y: 18 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.25 }}>
             {isArabic
@@ -40,7 +40,7 @@ export const HeroSection: React.FC = () => {
           </div>
           <div className="hero-actions">
             <a href={APP_STORE_URL} target="_blank" rel="noreferrer" className="app-store-link">
-              <img src="/assets/AppStoreBadge.png" alt={isArabic ? "حمّل تطبيق الكتاب من App Store" : "Download Al-Kitab on the App Store"} />
+              <img src={isArabic ? "/assets/AppStoreBadge-ar.png" : "/assets/AppStoreBadge-en.png"} alt={isArabic ? "حمّل تطبيق الكتاب من App Store" : "Download Al-Ketab on the App Store"} />
             </a>
             <a href="#correction" className="hero-learn-link">{isArabic ? "اكتشف الجديد" : "Discover what’s new"} <ArrowDown size={17} /></a>
           </div>

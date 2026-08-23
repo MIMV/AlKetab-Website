@@ -46,7 +46,7 @@ export const LanguageProvider: React.FC<React.PropsWithChildren> = ({ children }
     document.documentElement.dir = isArabic ? "rtl" : "ltr";
     document.title = isArabic
       ? "الكتاب: تصحيح تلاوة القرآن بالذكاء الاصطناعي دون إنترنت"
-      : "Al-Kitab: Free Offline AI Quran Recitation Correction";
+      : "Al-Ketab: Free Offline AI Quran Recitation Correction";
 
     const description = document.querySelector<HTMLMetaElement>('meta[name="description"]');
     if (description) {

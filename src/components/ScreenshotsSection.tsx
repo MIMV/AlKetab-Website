@@ -44,15 +44,15 @@ export function ScreenshotsSection() {
       }
     : {
         kicker: "Inside the app",
-        title: "See Al-Kitab in action",
+        title: "See Al-Ketab in action",
         description:
           "Explore correction, Quran Teacher, review, and search — swipe to see more.",
         count: "10 screenshots",
         hint: "Swipe horizontally to explore",
         previous: "Previous screenshots",
         next: "Next screenshots",
-        gallery: "Al-Kitab app screenshots",
-        imageAlt: (number: string) => `Al-Kitab app screenshot ${number}`,
+        gallery: "Al-Ketab app screenshots",
+        imageAlt: (number: string) => `Al-Ketab app screenshot ${number}`,
       };
 
   return (

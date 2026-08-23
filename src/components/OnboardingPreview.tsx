@@ -93,7 +93,7 @@ export const OnboardingPreview: React.FC = () => {
               <img src="/assets/AppIcon.png" alt="" />
             </div>
           </div>
-          <p className="onboarding-brand">{isArabic ? "الكتاب" : "Al-Kitab"}</p>
+          <p className="onboarding-brand">{isArabic ? "الكتاب" : "Al-Ketab"}</p>
           <p className="onboarding-eyebrow">{isArabic ? "تطبيق قرآن متطور من آي-فون إسلام" : "An advanced Quran app by iPhoneIslam"}</p>
           <h2>{isArabic ? <>رفيقك مع القرآن،<br />كل يوم</> : <>Your Quran companion,<br />every day</>}</h2>
           <p className="onboarding-copy">{isArabic ? "اقرأ بثقة، وتحسّن بلطف، وابنِ عادة قرآنية تناسب حياتك." : "Recite with confidence, improve gently, and build a Quran habit that fits your life."}</p>
@@ -109,7 +109,7 @@ export const OnboardingPreview: React.FC = () => {
       return (
         <div className="onboarding-panel">
           <p className="onboarding-kicker">{isArabic ? "أهدافك" : "Your goals"}</p>
-          <h2>{isArabic ? <>بماذا تحب أن يساعدك <em>الكتاب</em>؟</> : <>How would you like <em>Al-Kitab</em> to help?</>}</h2>
+          <h2>{isArabic ? <>بماذا تحب أن يساعدك <em>الكتاب</em>؟</> : <>How would you like <em>Al-Ketab</em> to help?</>}</h2>
           <p className="onboarding-copy align-start">{isArabic ? "اختر ما تشاء — يمكنك تعديل ذلك لاحقًا." : "Choose as many as you like — you can change these later."}</p>
           <div className="onboarding-options onboarding-goals">
             {goals.map((goal, index) => {
@@ -140,7 +140,7 @@ export const OnboardingPreview: React.FC = () => {
       return (
         <div className="onboarding-panel">
           <p className="onboarding-kicker">{isArabic ? "مستوى التصحيح" : "Correction level"}</p>
-          <h2>{isArabic ? <>كيف تحب أن يصحّح لك <em>الكتاب</em>؟</> : <>How should <em>Al-Kitab</em> correct you?</>}</h2>
+          <h2>{isArabic ? <>كيف تحب أن يصحّح لك <em>الكتاب</em>؟</> : <>How should <em>Al-Ketab</em> correct you?</>}</h2>
           <div className="recitation-sample" aria-label={isArabic ? "مثال على تصحيح التلاوة" : "Recitation correction example"}>
             <div className="sample-meta"><span>{isArabic ? "مثال · سورة الفاتحة" : "Example · Al-Fatihah"}</span><span className="live-status"><span /> {isArabic ? "يستمع" : "Listening"}</span></div>
             <div className="sample-words">
@@ -211,7 +211,7 @@ export const OnboardingPreview: React.FC = () => {
             <div className="privacy-wave">{[1, 2, 3, 4, 5, 6, 7].map((bar) => <i key={bar} />)}</div>
           </div>
           <h2>{isArabic ? <>اقرأ بحرية.<br />صوتك يبقى خاصًا.</> : <>Recite freely.<br />Your voice stays private.</>}</h2>
-          <p className="onboarding-copy align-start">{isArabic ? "يستمع الكتاب أثناء تلاوتك ويتابع كلماتك — وكل المعالجة تتم على جهازك." : "Al-Kitab listens and follows your words — with every part of the processing performed on your device."}</p>
+          <p className="onboarding-copy align-start">{isArabic ? "يستمع الكتاب أثناء تلاوتك ويتابع كلماتك — وكل المعالجة تتم على جهازك." : "Al-Ketab listens and follows your words — with every part of the processing performed on your device."}</p>
           <div className="privacy-benefits">
             <div><LockKeyhole size={18} /><span><strong>{isArabic ? "خصوصية تامة" : "Completely private"}</strong><small>{isArabic ? "لا حساب، ولا تسجيلات على خادم." : "No account and no server recordings."}</small></span></div>
             <div><CloudOff size={18} /><span><strong>{isArabic ? "يعمل بلا إنترنت" : "Works offline"}</strong><small>{isArabic ? "في المسجد، الطائرة، وفي أي مكان." : "In the masjid, on a plane, anywhere."}</small></span></div>
@@ -226,7 +226,7 @@ export const OnboardingPreview: React.FC = () => {
     return (
       <div className="onboarding-panel demo-panel">
         <p className="onboarding-kicker">{isArabic ? "متابعة حية للكلمات" : "Live word tracking"}</p>
-        <h2>{isArabic ? <>شاهد <em>الكتاب</em> يتابعك كلمة بكلمة</> : <>Watch <em>Al-Kitab</em> follow you word by word</>}</h2>
+        <h2>{isArabic ? <>شاهد <em>الكتاب</em> يتابعك كلمة بكلمة</> : <>Watch <em>Al-Ketab</em> follow you word by word</>}</h2>
         <p className="onboarding-copy align-start">{isArabic ? "عرض توضيحي — لا حاجة إلى الميكروفون الآن." : "A quick demonstration — no microphone needed."}</p>
         <div className="live-demo-card">
           <div className="sample-meta"><span>{isArabic ? "سورة الفاتحة · ١–٢" : "Al-Fatihah · 1–2"}</span><span className="live-status"><span /> {demoDone ? (isArabic ? "تم" : "Done") : (isArabic ? "يستمع" : "Listening")}</span></div>
@@ -242,7 +242,7 @@ export const OnboardingPreview: React.FC = () => {
         </div>
         <div className={`demo-result ${demoDone ? "is-complete" : ""}`}>
           <div>
-            <span>{demoDone ? (isArabic ? "أحسنت — اكتملت المتابعة" : "Well done — tracking complete") : (isArabic ? "يتابع الكتاب تلاوتك" : "Al-Kitab is following your recitation")}</span>
+            <span>{demoDone ? (isArabic ? "أحسنت — اكتملت المتابعة" : "Well done — tracking complete") : (isArabic ? "يتابع الكتاب تلاوتك" : "Al-Ketab is following your recitation")}</span>
             <strong>{formatNumber(Math.min(Math.max(demoIndex, 0), 8), isArabic)} / {isArabic ? "٨" : "8"}</strong>
           </div>
           <i><b style={{ width: `${Math.min(Math.max(demoIndex, 0), 8) * 12.5}%` }} /></i>

@@ -1,17 +1,17 @@
-# Al-Kitab — تطبيق الكتاب
+# Al-Ketab — تطبيق الكتاب
 
-The marketing website for **Al-Kitab (الكتاب)**, an iOS Quran app with private, offline, on-device recitation correction.
+The marketing website for **Al-Ketab (الكتاب)**, an iOS Quran app with private, offline, on-device recitation correction.
 
 The site is available in Arabic and English, with a persistent language switch and full RTL/LTR support.
 
 **Live site**: [quran.alketab.app](https://quran.alketab.app)
-**App Store**: [Al-Kitab on the App Store](https://apps.apple.com/us/app/id543646326)
+**App Store**: [Al-Ketab on the App Store](https://apps.apple.com/us/app/id543646326)
 
 > رتّل، والكتاب يصحّح لك — مجانًا، بلا إنترنت، وبخصوصية تامة.
 
 ## About the app
 
-Al-Kitab listens as you recite, follows word by word, and helps you improve. The correction engine runs entirely on iPhone: no account, no upload, and no internet connection required.
+Al-Ketab listens as you recite, follows word by word, and helps you improve. The correction engine runs entirely on iPhone: no account, no upload, and no internet connection required.
 
 ### Features
 
@@ -24,7 +24,7 @@ Al-Kitab listens as you recite, follows word by word, and helps you improve. The
 
 ## About this repository
 
-This repo contains the source for the marketing website only — the Al-Kitab iOS app itself is closed-source.
+This repo contains the source for the marketing website only — the Al-Ketab iOS app itself is closed-source.
 
 ### Tech stack
 

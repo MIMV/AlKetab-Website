@@ -35,9 +35,9 @@ export const Header: React.FC = () => {
   return (
     <header className={`site-header ${isScrolled ? "is-scrolled" : ""}`}>
       <div className="site-header-inner">
-        <a className="site-logo" href="#top" aria-label={isArabic ? "الكتاب — الصفحة الرئيسية" : "Al-Kitab — Home"}>
+        <a className="site-logo" href="#top" aria-label={isArabic ? "الكتاب — الصفحة الرئيسية" : "Al-Ketab — Home"}>
           <img src="/assets/AppIcon.png" alt="" />
-          <span>{isArabic ? "الكتاب" : "Al-Kitab"}</span>
+          <span>{isArabic ? "الكتاب" : "Al-Ketab"}</span>
         </a>
         <nav className="desktop-nav" aria-label={isArabic ? "التنقل الرئيسي" : "Main navigation"}>
           {navLinks.map((link) => <a href={link.href} key={link.name}>{link.name}</a>)}
@@ -48,6 +48,9 @@ export const Header: React.FC = () => {
         <a className="header-download" href={APP_STORE_URL} target="_blank" rel="noreferrer">
           <Download size={15} /> {isArabic ? "تحميل مجاني" : "Free download"}
         </a>
+        <a className="mobile-header-language" href={`/${nextLanguage}/`} onClick={(event) => { event.preventDefault(); setLanguage(nextLanguage); }} aria-label={isArabic ? "Switch to English" : "التبديل إلى العربية"}>
+          <Languages size={16} /><span>{isArabic ? "EN" : "ع"}</span>
+        </a>
         <button className="menu-toggle" type="button" aria-label={isArabic ? (isOpen ? "إغلاق القائمة" : "فتح القائمة") : (isOpen ? "Close menu" : "Open menu")} aria-expanded={isOpen} onClick={() => setIsOpen((value) => !value)}>
           {isOpen ? <X /> : <Menu />}
         </button>
@@ -56,7 +59,6 @@ export const Header: React.FC = () => {
         {isOpen && (
           <motion.nav className="mobile-nav" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }}>
             {navLinks.map((link) => <a href={link.href} key={link.name} onClick={() => setIsOpen(false)}>{link.name}</a>)}
-            <a className="mobile-language-toggle" href={`/${nextLanguage}/`} onClick={(event) => { event.preventDefault(); setIsOpen(false); setLanguage(nextLanguage); }}><Languages size={15} /> {isArabic ? "English" : "العربية"}</a>
             <a href={APP_STORE_URL} target="_blank" rel="noreferrer">{isArabic ? "تحميل التطبيق من App Store" : "Download on the App Store"}</a>
           </motion.nav>
         )}

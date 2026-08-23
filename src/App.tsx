@@ -18,6 +18,9 @@ function App() {
         <Header />
         <HeroSection />
         <FeaturesSection />
+        <figure className="faq-reader-illustration">
+          <img src="/assets/man-reading-quran-transparent.png" alt={isArabic ? "رجل يقرأ القرآن الكريم" : "A man reading the Quran"} />
+        </figure>
         <FAQSection />
         <CTASection />
         <Footer />

@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="site-footer">
       <div className="footer-top">
-        <a className="footer-brand" href="#top"><img src="/assets/AppIcon.png" alt="" /><span><strong>{isArabic ? "الكتاب" : "Al-Kitab"}</strong><small>{isArabic ? "رفيقك مع القرآن، كل يوم" : "Your Quran companion, every day"}</small></span></a>
+        <a className="footer-brand" href="#top"><img src="/assets/AppIcon.png" alt="" /><span><strong>{isArabic ? "الكتاب" : "Al-Ketab"}</strong><small>{isArabic ? "رفيقك مع القرآن، كل يوم" : "Your Quran companion, every day"}</small></span></a>
         <nav aria-label={isArabic ? "روابط التذييل" : "Footer links"}><a href="#complete-app">{isArabic ? "كل المزايا" : "All features"}</a><a href="#correction">{isArabic ? "تصحيح التلاوة" : "Recitation Correction"}</a><a href="#teacher">{isArabic ? "المعلّم" : "Quran Teacher"}</a><a href="#memorization">{isArabic ? "الحفظ" : "Memorization"}</a><a href="#faq">{isArabic ? "الأسئلة" : "FAQ"}</a></nav>
         <div className="footer-contact"><a href="mailto:info@iPhoneIslam.com">info@iPhoneIslam.com</a><a href="https://iphoneislam.com/privacy-policy" target="_blank" rel="noreferrer">{isArabic ? "سياسة الخصوصية" : "Privacy Policy"}</a><a href="https://iphoneislam.com/terms" target="_blank" rel="noreferrer">{isArabic ? "شروط الاستخدام" : "Terms of Use"}</a><a href="https://iphoneislam.com/contactus" target="_blank" rel="noreferrer">{isArabic ? "الدعم" : "Support"}</a></div>
       </div>
