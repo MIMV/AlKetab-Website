@@ -4,7 +4,7 @@ The marketing website for **Al-Ketab (الكتاب)**, an iOS Quran app with pri
 
 The site is available in Arabic and English, with a persistent language switch and full RTL/LTR support.
 
-**Live site**: [quran.alketab.app](https://quran.alketab.app)
+**Live site**: [alketab.app](https://alketab.app)
 **App Store**: [Al-Ketab on the App Store](https://apps.apple.com/us/app/id543646326)
 
 > رتّل، والكتاب يصحّح لك — مجانًا، بلا إنترنت، وبخصوصية تامة.
@@ -33,7 +33,7 @@ This repo contains the source for the marketing website only — the Al-Ketab iO
 - Tailwind CSS
 - Framer Motion
 - Arabic-first, RTL responsive design
-- Deployed to GitHub Pages at [quran.alketab.app](https://quran.alketab.app)
+- Deployed to GitHub Pages at [alketab.app](https://alketab.app)
 
 ### Local development
 
