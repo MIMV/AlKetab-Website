@@ -256,6 +256,9 @@ button { font: inherit; }
 .desktop-nav a::after { content: ""; position: absolute; right: 0; left: 100%; bottom: -7px; height: 1px; background: var(--sand); transition: left .2s ease; }
 .desktop-nav a:hover { color: var(--sand-light); }
 .desktop-nav a:hover::after { left: 0; }
+.desktop-nav .nav-product-link { padding: 8px 12px; border: 1px solid rgba(204,178,153,.22); border-radius: 999px; color: var(--sand-light); background: rgba(204,178,153,.055); white-space: nowrap; }
+.desktop-nav .nav-product-link::after { display: none; }
+.desktop-nav .nav-product-link:hover { border-color: rgba(204,178,153,.4); background: rgba(204,178,153,.12); }
 .header-download { min-height: 38px; display: inline-flex; align-items: center; gap: 7px; padding: 0 15px; border: 1px solid rgba(204,178,153,.28); border-radius: 12px; color: var(--sand-light); background: rgba(204,178,153,.07); font-size: 11px; font-weight: 600; text-decoration: none; transition: background .2s ease, transform .2s ease; }
 .header-download:hover { transform: translateY(-1px); background: rgba(204,178,153,.14); }
 .language-toggle { min-height: 38px; display: inline-flex; align-items: center; gap: 7px; padding: 0 12px; border: 1px solid rgba(204,178,153,.14); border-radius: 12px; color: rgba(243,237,230,.62); background: rgba(255,255,255,.025); font-size: 10px; font-weight: 600; text-decoration: none; cursor: pointer; transition: color .2s ease, border-color .2s ease, background .2s ease; }
@@ -509,7 +512,10 @@ button { font: inherit; }
   .menu-toggle { display: grid; margin-inline-start: 0; flex: none; }
   .mobile-nav { display: grid; width: min(100%, 560px); margin: 10px auto 0; padding: 12px; border: 1px solid rgba(204,178,153,.12); border-radius: 18px; background: rgba(14,12,10,.96); box-shadow: 0 24px 60px rgba(0,0,0,.4); }
   .mobile-nav a { padding: 12px 14px; border-bottom: 1px solid rgba(204,178,153,.07); color: rgba(243,237,230,.66); font-size: 12px; text-decoration: none; }
+  .mobile-product-links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 10px 0; }
+  .mobile-product-links a { border: 1px solid rgba(204,178,153,.22); border-radius: 11px; color: var(--sand-light); background: rgba(204,178,153,.06); text-align: center; font-weight: 600; }
   .mobile-nav a:last-child { margin-top: 5px; border: 0; border-radius: 11px; color: #231a11; background: var(--sand); text-align: center; font-weight: 700; }
+  .mobile-product-links a:last-child { margin-top: 0; border: 1px solid rgba(204,178,153,.22); color: var(--sand-light); background: rgba(204,178,153,.06); }
   .correction-section, .teacher-section, .memorization-section, .release-section, .faq-section { grid-template-columns: 1fr; }
   .correction-section .section-heading, .teacher-copy, .memorization-copy { max-width: 680px; }
   .teacher-visual { order: 2; }

@@ -4,6 +4,10 @@ import { Download, Languages, Menu, X } from "lucide-react";
 import { useLanguage } from "../LanguageContext";
 
 const APP_STORE_URL = "https://apps.apple.com/us/app/id543646326";
+const productLinks = [
+  { englishName: "AI Search", arabicName: "بحث بالـAI", href: "https://quran.alketab.app/" },
+  { englishName: "Prompter", arabicName: "ملقن القرآن", href: "https://prompter.alketab.app/" },
+];
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,13 +20,11 @@ export const Header: React.FC = () => {
     { name: "تصحيح التلاوة", href: "#correction" },
     { name: "المعلّم", href: "#teacher" },
     { name: "الحفظ والمراجعة", href: "#memorization" },
-    { name: "الخصوصية", href: "#privacy" },
   ] : [
     { name: "All features", href: "#complete-app" },
     { name: "Correction", href: "#correction" },
     { name: "Quran Teacher", href: "#teacher" },
     { name: "Memorization", href: "#memorization" },
-    { name: "Privacy", href: "#privacy" },
   ];
 
   useEffect(() => {
@@ -41,6 +43,7 @@ export const Header: React.FC = () => {
         </a>
         <nav className="desktop-nav" aria-label={isArabic ? "التنقل الرئيسي" : "Main navigation"}>
           {navLinks.map((link) => <a href={link.href} key={link.name}>{link.name}</a>)}
+          {productLinks.map((link) => <a className="nav-product-link" href={link.href} key={link.href} target="_blank" rel="noreferrer">{isArabic ? link.arabicName : link.englishName}</a>)}
         </nav>
         <a className="language-toggle" href={`/${nextLanguage}/`} onClick={(event) => { event.preventDefault(); setLanguage(nextLanguage); }} aria-label={isArabic ? "Switch to English" : "التبديل إلى العربية"}>
           <Languages size={15} /><span>{isArabic ? "English" : "العربية"}</span>
@@ -59,6 +62,9 @@ export const Header: React.FC = () => {
         {isOpen && (
           <motion.nav className="mobile-nav" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }}>
             {navLinks.map((link) => <a href={link.href} key={link.name} onClick={() => setIsOpen(false)}>{link.name}</a>)}
+            <div className="mobile-product-links">
+              {productLinks.map((link) => <a href={link.href} key={link.href} target="_blank" rel="noreferrer" onClick={() => setIsOpen(false)}>{isArabic ? link.arabicName : link.englishName}</a>)}
+            </div>
             <a href={APP_STORE_URL} target="_blank" rel="noreferrer">{isArabic ? "تحميل التطبيق من App Store" : "Download on the App Store"}</a>
           </motion.nav>
         )}
